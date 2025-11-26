@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "お気に入りセット切り替え",
+  "version": "1.2.0",
+  "description": "ブックマークバーを「お気に入り1/2/3」などのセットごとに切り替え、ブックマークバーの編集内容をアクティブなセットに自動反映します。",
+  "permissions": [
+    "bookmarks",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "お気に入りセット切り替え"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

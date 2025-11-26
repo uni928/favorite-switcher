@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>お気に入りセット切り替え</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      font-size: 13px;
+      margin: 10px;
+      min-width: 260px;
+    }
+    h1 {
+      font-size: 14px;
+      margin: 0 0 6px;
+    }
+    label {
+      font-weight: bold;
+      font-size: 12px;
+    }
+    select, button {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 4px 0;
+      padding: 4px 6px;
+      font-size: 13px;
+    }
+    #status {
+      margin-top: 6px;
+      min-height: 16px;
+      font-size: 12px;
+      color: #333;
+    }
+    .note {
+      margin-top: 6px;
+      font-size: 11px;
+      color: #666;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <h1>お気に入りセット切り替え</h1>
+
+  <label for="setSelector">切り替えるセット:</label>
+  <select id="setSelector">
+    <!-- JSで ★FavoriteSets 直下のフォルダを動的に追加します -->
+  </select>
+
+  <button id="applyBtn">このセットを表示</button>
+
+  <div class="note">
+    ・インストール時に「その他のブックマーク」内に<br>
+    　「★FavoriteSets / お気に入り1〜3」を自動作成します。<br>
+    ・インストール時点のブックマークバーの中身は<br>
+    　自動で「お気に入り1」にコピーされます。<br>
+    ・★FavoriteSets 配下にフォルダを追加すると、<br>
+    　ここに自動で候補として表示されます。<br>
+    ・ブックマークバーを編集した内容は、<br>
+    　現在アクティブなセットに自動保存されます。
+  </div>
+
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
